@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
+import AdminDashboard from "./AdminDashboard";
 
 function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -64,16 +65,16 @@ function AdminLogin() {
     return <p>Loading...</p>;
   }
 
-  if (admin) {
+  
+if (admin) {
     return (
-      <section className="admin-container">
-        <h1>🐾 Admin Dashboard</h1>
-        <p>Welcome, {admin.email}!</p>
-        <p>You are logged in as an administrator.</p>
-        <button onClick={handleLogout}>Log Out</button>
-      </section>
+      <AdminDashboard
+        admin={admin}
+        onLogout={handleLogout}
+      />
     );
   }
+  
 
   return (
     <section className="admin-container">
