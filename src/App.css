@@ -169,3 +169,13 @@ main {
   }
 }
 
+
+.animal-photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+

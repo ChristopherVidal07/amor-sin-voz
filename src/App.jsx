@@ -51,15 +51,18 @@ function App() {
         <p>No animals available right now.</p>
       )}
 
-      {animals.map((animal) => (
-        <AnimalCard
-          key={animal.id}
-          name={animal.name}
-          species={animal.species}
-          age={animal.age}
-          description={animal.description}
-        />
-      ))}
+      
+{animals.map((animal) => (
+  <AnimalCard
+    key={animal.id}
+    name={animal.name}
+    species={animal.species}
+    age={animal.age}
+    description={animal.description}
+    imageUrl={animal.image_url}
+  />
+))}
+
     </main>
   );
 }
