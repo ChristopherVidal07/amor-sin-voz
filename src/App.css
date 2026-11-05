@@ -49,3 +49,46 @@ main {
 .animal-card button:hover {
   background-color: #c76250;
 }
+
+
+
+.admin-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.admin-container h1,
+.admin-container h2 {
+  text-align: center;
+  color: #214c3d;
+}
+
+.admin-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-container input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.admin-container button {
+  background: #df7865;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.admin-container button:hover {
+  background: #c76250;
+}

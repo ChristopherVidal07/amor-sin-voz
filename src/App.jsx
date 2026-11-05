@@ -2,12 +2,18 @@
 import { useEffect, useState } from "react";
 import { supabase } from "./lib/supabaseClient";
 import AnimalCard from "./components/AnimalCard";
+import AdminLogin from "./components/AdminLogin";
 import "./App.css";
+
 
 function App() {
   const [animals, setAnimals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  if (window.location.pathname === "/admin") {
+    return <AdminLogin />;
+  }
 
   useEffect(() => {
     async function fetchAnimals() {
@@ -25,6 +31,7 @@ function App() {
 
       setLoading(false);
     }
+    
 
     fetchAnimals();
   }, []);
